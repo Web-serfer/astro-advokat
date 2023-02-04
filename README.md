@@ -7,3 +7,5 @@
 
 <img style="max-width:500px" src="public/images/preview.jpg">
 
+## Заработок на автомате
+[![Автоматический заработок](https://autodengi.com/faners/ru/468.gif)](https://autodengi.com/pr/686527)
