@@ -1,0 +1,210 @@
+---
+import SearchCategories from '../general/SearchCategories.astro'
+import Subscribe from '../general/footerWidget/Subscribe.astro'
+import img100 from "../../images/footerImg/100.jpg"
+import img110 from "../../images/footerImg/110.jpg"
+import admin from '../../images/admin.webp'
+---
+
+
+<section class="footer-widgets">
+  <div class="container">
+    <div class="row">
+      <div class="col col-4 col-d-6 col-t-12">
+        <div class="widget widget-recent">
+          <div class="widget__head">
+            <h3 class="widget__title">Youtube видео</h3>
+          </div>
+          <div class="recent-posts">
+            <a
+              class="recent-posts__image"
+              href="/2018/11/13/that-which-does-not-kill-us-makes-us-stronger/"
+              ><img
+                class="lazy loaded"
+                alt="home"
+                data-ll-status="loaded"
+                src={img100}
+              />
+            </a>
+
+            <div class="recent-posts__content">
+              <div class="article__meta">
+                <span class="article__minutes"></span>
+                <time class="article__date" datetime="2018-11-13T12:01:35+00:00"
+                  >Nov 13, 2018</time
+                >
+              </div>
+              <h4 class="recent-posts__title">
+                <a
+                  href="/2018/11/13/that-which-does-not-kill-us-makes-us-stronger/"
+                  >That which does not kill us makes us stronger</a>
+              </h4>
+              <div class="article__bottom">
+                <div class="article__author">
+                  <a href="/about/" aria-label="Robert Wilson"
+                    ><img
+                      class="article__author-image lazy loaded"
+                      alt="author"
+                      data-ll-status="loaded"
+                      src={admin}
+                    />
+                  </a>
+                </div>
+                <div class="article__bottom-meta">
+                  <a href="/about/" class="article__author-link"
+                    >Адвокат
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recent-posts">
+            <a
+              class="recent-posts__image"
+              href="/2018/11/12/do-what-you-can-with-what-you-have-where-you-are/"
+              ><img
+                class="lazy loaded"
+                alt="metro"
+                data-ll-status="loaded"
+                src={img110}
+              />
+            </a>
+
+            <div class="recent-posts__content">
+              <div class="article__meta">
+                <span class="article__minutes"></span>
+                <time class="article__date" datetime="2018-11-12T12:01:35+00:00"
+                  >Nov 12, 2018</time
+                >
+              </div>
+              <h4 class="recent-posts__title">
+                <a
+                  href="/2018/11/12/do-what-you-can-with-what-you-have-where-you-are/"
+                  >Do what you can, with what you have, where you are</a>
+              </h4>
+              <div class="article__bottom">
+                <div class="article__author">
+                  <a href="/about/" aria-label="Robert Wilson"
+                    ><img
+                      class="article__author-image lazy loaded"
+                      alt="author"
+                      data-ll-status="loaded"
+                      src={admin}
+                    />
+                  </a>
+                </div>
+                <div class="article__bottom-meta">
+                  <a href="/about/" class="article__author-link"
+                    >Адвокат</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <SearchCategories />
+      <Subscribe />
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  .footer-widgets{
+  padding: 64px 0 32px;
+}
+
+  .footer-widgets .row .col{
+    flex-grow: 1;
+  }
+
+  @media only screen and (max-width: 768px){
+    .footer-widgets{
+      padding: 48px 0 0;
+    }
+  }
+
+  .widget{
+    margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 768px){
+    .widget{
+      margin-bottom: 64px;
+    }
+}
+
+  .recent-posts{
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+  }
+
+  .recent-posts:last-child{
+    margin-bottom: 0;
+  }
+
+  @media only screen and (max-width: 360px){
+    .recent-posts{
+        flex-wrap:wrap;
+        margin-bottom: 32px;
+    }
+  }
+
+  .recent-posts__title{
+    text-decoration: underline;
+  }
+  
+  .recent-posts__image{
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 174px;
+    height: 144px;
+    margin-right: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #09080f;
+  }
+
+  .recent-posts__image img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  @media only screen and (max-width: 360px){
+    .recent-posts__image{
+      height: auto;
+      max-width: 100%;
+      padding-top: 56.6%;
+      margin: 0 0 20px;
+    }
+  }
+
+  .recent-posts__content .recent-posts__title{
+    font-size: 18px;
+    margin: 8px 0;
+  }
+
+  .recent-posts__content .article__author-image{
+    width: 28px;
+    height: 28px;
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    padding: 3px;
+    margin-right: 8px;
+    border: 2px solid #ff7b7b;
+    border-radius: 50%;
+    overflow: hidden;
+  } 
+</style>

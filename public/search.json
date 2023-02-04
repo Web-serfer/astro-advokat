@@ -1,0 +1,21 @@
+
+[ {
+  "title"    : "Первый пост",
+  "category" : "",
+  "tags"     : "Work and Notes",
+  "url"      : "/2022/10/20/first-post/",
+  "date"     : "20 октября, 2022",
+  "article"  : 
+    "<div class='article col col-4 col-d-6 col-t-12 grid__post animate'><div class='article__inner'><a class='article__image' href='/2022/10/20/first-post/'> <img src='/images/first-post/cardImg.jpg' alt='Первый пост'> </a><div class='article__content'> <div class='article__meta'> <span class='article__minutes'><time class='article__date' datetime='2022-10-20 T12:01:35+00:00'>20 октября 2022</time> </span> </div><h2 class='article__title'>Первый пост</h2> <p class='article__excerpt'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione autem modi, maiores eius error blanditiis non consequuntur aspernatur ...</p><div class='article__bottom'><div class='article__author'> <a href='/images/admin.jpg' aria-label='Адвокат'><img class='article__author-image' src='/images/admin.jpg' alt='Адвокат'></a> </div><div class='article__bottom-meta'><a href='/about/' class='article__author-link'>Адвокат</a><span></span> <span class='article-tags'> <a href='/tag/Work' class='article__tag'>Work</a>  <a href='/tag/Notes' class='article__tag'>Notes</a> </span></div></div></div></div></div>"
+  },
+
+  {
+    "title"    : "Believe and act as if it were impossible to fail",
+    "category" : "",
+    "tags"     : "Work and Notes",
+    "url"      : "/2018/11/05/Believe-and-act-as-if-it-were-impossible-to-fail/",
+    "date"     : "Nov 5, 2018",
+    "article"  : "<div class='article col col-4 col-d-6 col-t-12 grid__post animate'> <div class='article__inner'><a class='article__image' href='/2018/11/05/Believe-and-act-as-if-it-were-impossible-to-fail/'> <img src='/images/10.jpg' alt='Believe and act as if it were impossible to fail'> </a><div class='article__content'> <div class='article__meta'> <span class='article__minutes'>2 min read <time class='article__date' datetime='2018-11-05T12:01:35+00:00'>Nov 5, 2018</time> </span> </div><h2 class='article__title'>Believe and act as if it were impossible to fail</h2> <p class='article__excerpt'>Sin tantum modo ad indicia veteris memoriae cognoscenda, curiosorum. Haec et tu ita posuisti, et verba vestra sunt. Idemne potest esse dies...</p><div class='article__bottom'><div class='article__author'> <a href='/about/' aria-label='Robert Wilson'><img class='article__author-image' src='/images/15.jpg' alt='Robert Wilson's Picture'></a> </div><div class='article__bottom-meta'><a href='/about/' class='article__author-link'>Robert Wilson</a><span> in </span> <span class='article-tags'> <a href='/tag/Work' class='article__tag'>Work</a>  <a href='/tag/Notes' class='article__tag'>Notes</a> </span></div></div></div></div></div>"
+  }
+
+]

@@ -1,0 +1,79 @@
+<div class="col col-4 col-d-6 col-t-12">
+  <div class="widget widget-tag-cloud">
+    <div class="widget__head">
+      <h3 class="widget__title">Поиск по категориям</h3>
+    </div>
+    <div class="tag__cloud">
+      <a href="/tag/credits/" class="set-1">Кредитные дела</a>
+      <a href="/tag/ugolonie/" class="set-2">Уголовные дела</a>
+      <a href="/tag/administrativnie/" class="set-5">Административные споры</a>            
+      <a href="/tag/sudoproizvodstvo/" class="set-2">Судопроизводство</a>
+      <a href="/tag/strahovie/" class="set-2">Страховые дела</a>
+      <a href="/tag/mirovie/" class="set-5">Мировые судьи</a>
+      <a href="/tag/semeinie/" class="set-5">Семейные споры</a>
+      <a href="/tag/obgalovanie/" class="set-1">Обжалование актов</a>
+      <a href="/tag/documents/" class="set-4">Судебные документы</a>           
+    </div>
+  </div>
+</div>
+
+<style>  
+  .widget{
+    margin-bottom:40px;
+  }
+
+  @media only screen and (max-width: 768px){
+    .widget{
+        margin-bottom:64px;
+    }
+  }
+
+  .widget__title{
+    position:relative;
+    padding-left:8px;
+    margin-bottom:36px;
+    font-size:24px;
+    line-height:1;
+    color:#fff;
+  }
+
+  .widget__title::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    z-index:-1;
+    transform:translateY(-50%);
+    display:block;
+    width:106px;
+    height:38px;
+    border-radius:4px 0px 0px 4px;
+    background:linear-gradient(90deg, #ff7b7b -5.19%, rgba(15,14,21,0) 100%);
+  }
+
+  @media only screen and (max-width: 992px){
+    .widget__title{
+      font-size:24px;
+    }
+  }
+
+  .tag__cloud{
+    display:flex;
+    flex-wrap:wrap;
+}
+.tag__cloud a{
+  display:inline-block;
+  padding:8px 16px;
+  margin:0 5px 5px 0;
+  font-size:12px;
+  line-height:10px;
+  font-weight:700;
+  border:3px solid rgba(255,255,255,0.1);
+  border-radius:24px;
+  color:#aaa;
+}
+.tag__cloud a:hover{
+    border-color:#ff7b7b;
+    color:#fff;
+}
+</style>

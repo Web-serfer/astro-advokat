@@ -1,0 +1,144 @@
+<!-- begin search -->
+<div class="search">
+  <div class="container">
+     <div class="row">
+        <div class="col col-12">
+           <div class="search__box">
+              <div class="search__group">
+                 <div class="search__close">
+                    <i class="ion ion-md-close"></i>
+                 </div>
+                 <label for="js-search-input" class="screen-reader-text">Поиск по блогу</label>
+                 <input type="text" id="js-search-input" class="search__text" autocomplete="off" placeholder="Введите текст">
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="container">
+      <div 
+        class="row search-results-list" id="js-results-container">
+      </div>
+  </div>
+</div>
+<!-- end search -->
+
+
+<style>  
+  .search{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:100;
+    overflow:auto;
+    opacity:0;
+    visibility:hidden;
+    background-color:#09080f;
+    transition:all 0.5s ease-in-out;
+  }
+
+  .search.is-visible{
+    opacity:1;
+    visibility:visible;
+  }
+
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none){
+    .search{
+      -webkit-backdrop-filter:saturate(180%) blur(24px);
+      backdrop-filter:saturate(180%) blur(24px);
+      background-color:rgba(9,8,15,0.9);
+    }
+  }
+
+  .search__box{
+    position:relative;
+    max-width:540px;
+    width:100%;
+    margin:0 auto;
+    padding-top:140px;
+  }
+
+  .search__box .search__close{
+    position:absolute;
+    top:50%;
+    right:24px;
+    transform:translateY(-50%);
+    font-size:30px;
+    line-height:1;
+    color:rgba(238,238,238,0.5);
+    transition:all .25s;
+    cursor:pointer;
+  }
+
+  .search__box .search__close:hover{
+    color:#eee;
+  }
+
+  @media only screen and (max-width: 768px){
+    .search__box{
+      width:80%;
+      padding-top:100px;
+    }
+  }
+
+  @media only screen and (max-width: 576px){
+    .search__box{
+      width:90%;
+    }
+  }
+
+  .search__group{
+    position:relative;
+    margin-bottom:64px;
+  }
+
+  .search__group .search__text{
+    width:100%;
+    height:auto;
+    padding:16px 24px;  
+    font-size:24px;
+    font-weight:900;
+    line-height:42px;
+    border-radius:8px;
+    border:4px solid rgba(238,238,238,0.1);
+    transition:all .3s;
+    color:#fff;
+    background-color:transparent;
+  }
+
+  .search__group .search__text::-webkit-input-placeholder{
+    font-weight:900;
+    color:rgba(238,238,238,0.8);
+  }
+
+.search__group .search__text::placeholder{
+  font-weight:900;
+  color:rgba(238,238,238,0.8);
+}
+  .search__group .search__text::-ms-clear{
+    display:none;
+  }
+
+  .search__group .search__text:focus{
+    color:#eee;
+    background:#09080f;
+  }
+
+  @media only screen and (max-width: 576px){
+    .search__group .search__text{
+      font-size:26px;
+    }
+  }
+
+  .search-results-list .no-results{
+    width:100%;
+    list-style:none;
+  }
+
+  .search-results-list .no-results h3{
+    font-size:28px;
+    text-align:center;
+  }
+</style>

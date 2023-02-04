@@ -1,0 +1,88 @@
+---
+import '../styles/main.css'
+import HomeLayout from "../layouts/HomeLayout.astro";
+import Card from "../components/general/Card.astro";
+
+const posts = await Astro.glob("./posts/*.md");
+// const posts = await Astro.glob("./posts/2022/10/*.md");
+---
+
+
+<HomeLayout title="Главная || Адвокаты Сургута">
+  <section class="featured-post">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+          <div class="container__inner">
+            <!-- Top row cards -->
+            <div class="row">
+              {
+                posts.map((post) => (
+                  <Card>
+                    <div class="article__inner">
+                      <span class="featured-post ion ion-ios-star-outline" />
+                      <a
+                        class="article__image"
+                        href={`/${post.frontmatter.slug}`}
+                      >
+                        <img
+                          class="lazy loaded"
+                          alt={post.frontmatter.alt}
+                          data-ll-status="loaded"
+                          src={post.frontmatter.image}
+                        />
+                      </a>
+                      <div class="article__content">
+                        <div class="article__meta">
+                          <time
+                            class="article__date"
+                            datetime={post.frontmatter.date}
+                          >
+                            {post.frontmatter.date}
+                          </time>
+                        </div>
+                        <h2 class="article__title">{post.frontmatter.title}</h2>
+                        <p class="article__excerpt">
+                          {post.frontmatter.excerpt}
+                        </p>
+                        <div class="article__bottom">
+                          <div class="article__author">
+                            <a href="/about/" aria-label="Адвокат Сургут">
+                              <img
+                                class="article__author-image lazy loaded"
+                                alt="Адвокат Сургут"
+                                data-ll-status="loaded"
+                                src={post.frontmatter.adminImg}
+                              />
+                            </a>
+                          </div>
+
+                          <div class="article__bottom-meta">
+                            <a href="/about" class="article__author-link">
+                              {post.frontmatter.author}
+                            </a>
+                            <span class="article-tags">
+                              <a href="/tag/Work" class="article__tag">
+                                {post.frontmatter.tags}
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                ))
+              }
+            </div>
+            <!-- Middle row cards -->
+            <div class="row">
+              <!-- Empty -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</HomeLayout>
+
+

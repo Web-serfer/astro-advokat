@@ -1,0 +1,67 @@
+---
+import '../../styles/main.css'
+
+const today = new Date();
+import SocialIcons from '../general/SocialIcons.astro'
+---
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="footer__inner">
+          <div class="copyright">
+            <a href="/">
+              Адвокаты Сургута</a> 
+              © 2021-{today.getFullYear()} 
+              Все права защищены
+          </div>
+          <SocialIcons />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    position: relative;
+    padding: 64px 0;
+    border-top: 2px solid #09080f;
+  }
+
+  .footer .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .footer .footer__inner {
+      flex-direction: column;
+    }
+    .footer .footer__inner .copyright {
+      order: 1;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .footer .footer__inner {
+      align-items: flex-start;
+    }
+  }
+
+  .copyright {
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  .copyright a {
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .copyright a:hover {
+    color: #ff7b7b;
+  }
+  
+</style>
